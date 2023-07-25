@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- font family lato -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+<!-- fontawesome -->
+<script src="https://kit.fontawesome.com/1c622c67c6.js" crossorigin="anonymous"></script>
+    <!-- daisy -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@3.3.1/dist/full.css" rel="stylesheet" type="text/css" />
+  <!-- tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- tailwind custom css -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'color-primary': '#f85559',
+              "color-back-icon": '#1212121A',
+              'color-overlay':'#121212B3',
+              'color-rating':'#FBC0A8',
+              'color-footer': '#121212',
+              
+             
+            }
+          }
+        }
+      }
+    </script>
+    <!-- main css -->
+    <style>
+      *{
+        font-family: 'Lato', sans-serif;
+      }
+    </style>
+</head>
+<body>
+    <header class="max-w-screen-xl mx-auto p-4">
+        <nav class=" px-6 md:px:12 lg:px-12 py-5 my-8 lg:bg-color-primary lg:rounded-full">
+            <div class="flex justify-between items-center lg:flex-wrap ">
+             
+              <div class=" hidden lg:flex ">
+                <ul class="menu menu-horizontal px-1 lg:text-white ">
+                  <li><a>Home</a></li>
+                  <li><a>Shop</a></li>
+                  <li><a>News</a></li>
+                    <li><a>Contact</a></li>
+                </ul>
+              </div>
+             <div class="flex justify-center items-center gap-3"> 
+                <img src="./images/logo.png" alt="">
+                <a class="text-xl md:text-2xl font-extrabold lg:text-white">Fruit Burst</a>
+            </div>
+              <div class="hidden lg:flex  ">
+                <input type="text" placeholder="Search here" class="input input-bordered relative  rounded-full" />
+                  <div class="absolute mt-3 ml-40 hover:cursor-pointer">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                  </div>
+            </div>
+           
+              <!-- nav responsive -->
+              <div class="navbar-end">
+                <div class="dropdown flex justify-end">
+                  <label tabindex="0" class="btn btn-ghost lg:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                  </label>
+                  <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box text-xl ">
+                    <li ><a>Home</a></li>
+                    <li> <a>Shop</a></li>
+                    <li><a>News</a></li>
+                    <li><a>Contact</a></li>
+                  </ul>
+                </div>
+              
+              </div>
+            </div>
+          </nav>
+
+          <!-- carousel -->
+          <section class="mt-10     flex flex-col justify-center items-center  ">
+            <!-- b -->
+            <div class="  absolute flex flex-col justify-center items-center z-20 text-white ">
+                <h1 class="text-base md:text-4xl lg:text-6xl md:mb-7 font-extrabold text-center">Exotic tastes at your <br>doorstep</h1>
+                <p class="text-xs md:text-base">We supply highly quality organic products</p>
+                  <a class="bg-color-primary p-1.5 md:px-6 md:py-3 rounded-md mt-4">Shop Now</a>
+              </div>
+              <!--  -->
+             
+            <div class="carousel w-full bg-caro-bg relative">
+              <div id="slide1" class="carousel-item w-full relative  ">
+               
+                <div class="flex-1 relative  sm:w-full">
+                  <img src="./images/banner1.png" class="flex-1 " />
+                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 md:left-16 md:right-16 top-1/2">
+                  <a href="#slide4" class="btn border-0 bg-color-back-icon rounded-full text-xl">❮</a> 
+                  <a href="#slide2" class="btn border-0 bg-color-back-icon rounded-full text-xl">❯</a>
+                </div>
+                </div>
+              </div> 
+              <div id="slide2" class="carousel-item w-full relative ">
+               
+                <div class="flex-1 relative  sm:w-full">
+                  <img src="./images/banner2.png" class="flex-1 " />
+                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 md:left-16 md:right-16 top-1/2">
+                  <a href="#slide1" class="btn border-0 bg-color-back-icon rounded-full text-xl">❮</a> 
+                  <a href="#slide3" class="btn border-0 bg-color-back-icon rounded-full text-xl">❯</a>
+                </div>
+                </div>
+              </div> 
+              <div id="slide3" class="carousel-item w-full relative  ">
+               
+                <div class="flex-1 relative  sm:w-full">
+                  <img src="./images/banner3.png" class=" flex-1  " />
+                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 md:left-16 md:right-16 top-1/2">
+                  <a href="#slide2" class="btn border-0 bg-color-back-icon rounded-full text-xl">❮</a> 
+                  <a href="#slide4" class="btn border-0 bg-color-back-icon rounded-full text-xl">❯</a>
+                </div>
+                </div>
+              </div> 
+              <div id="slide4" class="carousel-item w-full  relative ">
+               
+                <div class="flex-1 relative  sm:w-full">
+                  <img src="./images/banner4.png" class="flex-1 " />
+                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 md:left-16 md:right-16 top-1/2">
+                  <a href="#slide3" class="btn border-0 bg-color-back-icon rounded-full text-xl">❮</a> 
+                  <a href="#slide1" class="btn border-0 bg-color-back-icon rounded-full text-xl">❯</a>
+                </div>
+                </div>
+              </div> 
+              </div> 
+              
+            </div>
+          </section>
+    </header>
+</body>
+</html>
