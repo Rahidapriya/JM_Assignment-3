@@ -1,468 +1,562 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fruit Burst</title>
-    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
-    <!-- font family lato -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
-<!-- fontawesome -->
-<script src="https://kit.fontawesome.com/1c622c67c6.js" crossorigin="anonymous"></script>
-    <!-- daisy -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fruit Burst</title>
+  <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+  <!-- font family lato -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+  <!-- fontawesome -->
+  <script src="https://kit.fontawesome.com/1c622c67c6.js" crossorigin="anonymous"></script>
+  <!-- daisy -->
   <link href="https://cdn.jsdelivr.net/npm/daisyui@3.3.1/dist/full.css" rel="stylesheet" type="text/css" />
   <!-- tailwind -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- tailwind custom css -->
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              'color-primary': '#f85559',
-              "color-back-icon": '#1212121A',
-              'color-overlay':'#121212B3',
-              'color-rating':'#FBC0A8',
-              'color-footer': '#121212',
-              
-             
-            }
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- tailwind custom css -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'color-primary': '#f85559',
+            "color-back-icon": '#1212121A',
+            'color-overlay': '#121212B3',
+            'color-rating': '#FBC0A8',
+            'color-footer': '#121212',
+
+
           }
         }
       }
-    </script>
-    <!-- main css -->
-    <style>
-      *{
-        font-family: 'Lato', sans-serif;
-      }
-    </style>
+    }
+  </script>
+  <!-- main css -->
+  <style>
+    * {
+      font-family: 'Lato', sans-serif;
+    }
+  </style>
 </head>
+
 <body>
-    <header class="max-w-screen-xl mx-auto p-4">
-        <nav class=" px-6 md:px:12 lg:px-12 py-5 my-8 lg:bg-color-primary lg:rounded-full">
-            <div class="flex justify-between items-center lg:flex-wrap ">
-             
-              <div class=" hidden lg:flex ">
-                <ul class="menu menu-horizontal px-1 lg:text-white ">
-                  <li><a>Home</a></li>
-                  <li><a>Shop</a></li>
-                  <li><a>News</a></li>
-                    <li><a>Contact</a></li>
-                </ul>
-              </div>
-             <div class="flex justify-center items-center gap-3"> 
-                <img src="./images/logo.png" alt="">
-                <a class="text-xl md:text-2xl font-extrabold lg:text-white">Fruit Burst</a>
-            </div>
-              <div class="hidden lg:flex  ">
-                <input type="text" placeholder="Search here" class="input input-bordered relative  rounded-full" />
-                  <div class="absolute mt-3 ml-40 hover:cursor-pointer">
-                    <i class="fa fa-search" aria-hidden="true"></i>
-                  </div>
-            </div>
-           
-              <!-- nav responsive -->
-              <div class="navbar-end z-50">
-                <div class="dropdown flex justify-end">
-                  <label tabindex="0" class="btn btn-ghost lg:hidden ">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
-                  </label>
-                  <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box text-xl ">
-                    <li ><a>Home</a></li>
-                    <li> <a>Shop</a></li>
-                    <li><a>News</a></li>
-                    <li><a>Contact</a></li>
-                  </ul>
-                </div>
-              
-              </div>
-            </div>
-          </nav>
-     
-          <!-- carousel -->
-          <section class="mt-10     flex flex-col justify-center items-center  ">
-            <div class="flex flex-col  items-center  text-white z-20 relative">
-          
-            <!-- b -->
-            <div class="  absolute flex flex-col mt-10 items-center  text-white z-20 lg:mt-20 ">
-                <h1 class="text-base md:text-4xl lg:text-6xl md:mb-7 font-extrabold text-center">Exotic tastes at your <br>doorstep</h1>
-                <p class="text-xs md:text-base">We supply highly quality organic products</p>
-                  <a class="bg-color-primary p-1.5 md:px-6 md:py-3 rounded-md mt-4">Shop Now</a>
-              </div>
-              <!--  -->
-              
-              
-           
-             
-            <div class="carousel w-full bg-caro-bg relative">
-              <div id="slide1" class="carousel-item w-full relative  ">
-               
-                <div class="flex-1 relative  sm:w-full">
-                  <div class=" z-30 bg-[#121212] opacity-90   w-full flex-1 rounded-lg">
-                  
-                  <img src="./images/banner1.png" class="mix-blend-overlay  " />
-                </div>
-                 
-                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 md:left-16 md:right-16 top-1/2">
-                  <a href="#slide4" class="btn border-0 bg-color-overlay rounded-full text-xl text-white">❮</a> 
-                  <a href="#slide2" class="btn border-0 bg-color-overlay rounded-full text-xl text-white">❯</a>
-                </div>
+  <header class="max-w-screen-xl mx-auto p-4">
+    <nav class=" px-6 md:px:12 lg:px-12 py-5 my-8 lg:bg-color-primary lg:rounded-full">
+      <div class="flex justify-between items-center lg:flex-wrap ">
 
-           
-
-                </div>
-              </div> 
-              <div id="slide2" class="carousel-item w-full relative ">
-               
-                <div class="flex-1 relative  sm:w-full">
-                  <div class=" z-30 bg-[#121212] opacity-90   w-full flex-1 rounded-lg">
-                  
-                  <img src="./images/banner2.png" class="mix-blend-overlay  " />
-                </div>
-                  
-                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 md:left-16 md:right-16 top-1/2">
-                  <a href="#slide1" class="btn border-0 bg-color-overlay rounded-full text-xl text-white">❮</a> 
-                  <a href="#slide3" class="btn border-0 bg-color-overlay rounded-full text-xl text-white">❯</a>
-                </div>
-             
-                </div>
-              </div> 
-              <div id="slide3" class="carousel-item w-full relative  ">
-                
-               
-                <div class="flex-1 relative  sm:w-full">
-                  <div class=" z-30 bg-[#121212] opacity-90   w-full flex-1 rounded-lg">
-                  
-                  <img src="./images/banner3.png" class="mix-blend-overlay  " />
-                </div>
-                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 md:left-16 md:right-16 top-1/2">
-                  <a href="#slide2" class="btn border-0 bg-color-overlay rounded-full text-xl text-white">❮</a> 
-                  <a href="#slide4" class="btn border-0 bg-color-overlay rounded-full text-xl text-white">❯</a>
-                </div>
-                </div>
-              </div> 
-              <div id="slide4" class="carousel-item w-full  relative ">
-                
-               
-                <div class="flex-1 relative  sm:w-full">
-                  <div class=" z-30 bg-[#121212] opacity-90   w-full flex-1 rounded-lg">
-                  
-                  <img src="./images/banner4.png" class="mix-blend-overlay  " />
-                </div>
-                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 md:left-16 md:right-16 top-1/2">
-                  <a href="#slide3" class="btn border-0 bg-color-overlay rounded-full text-xl text-white">❮</a> 
-                  <a href="#slide1" class="btn border-0 bg-color-overlay rounded-full text-xl text-white">❯</a>
-                </div>
-                </div>
-              </div> 
-              </div> 
-              
-            <!--  -->
-            <div class=" hidden    lg:flex bg-white -mt-14 z-40 px-20 p-5 rounded-xl gap-6">
-              <img src="./images/fruit1.png" alt="">
-              <img src="./images/fruit2.png" alt="">
-              <img src="./images/fruit3.png" alt="">
-              <img src="./images/fruit4.png" alt="">
-              <img src="./images/fruit5.png" alt="">
-             </div>
-             
-             </div>
-            
-           
-         
-            <!--  -->
-       
-        
-
-          </section>
-    </header>
-
-    <!-- deal of the day section -->
-    <section class="max-w-screen-xl mx-auto p-4 mt-20">
-      <div class="flex flex-col ">
-        <div class="flex flex-col text-center lg:flex-row justify-between items-center lg:text-left gap-10 ">
-          <div class=" flex-1 space-y-3">
-            <h1 class="text-4xl font-extrabold">Deal of the day</h1>
-            <p class="text-sm ">Contrary to popular belief, is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+        <div class=" hidden lg:flex ">
+          <ul class="menu menu-horizontal px-1 lg:text-white ">
+            <li><a>Home</a></li>
+            <li><a>Shop</a></li>
+            <li><a>News</a></li>
+            <li><a>Contact</a></li>
+          </ul>
+        </div>
+        <div class="flex justify-center items-center gap-3">
+          <img src="./images/logo.png" alt="">
+          <a class="text-xl md:text-2xl font-extrabold lg:text-white">Fruit Burst</a>
+        </div>
+        <div class="hidden lg:flex  ">
+          <input type="text" placeholder="Search here" class="input input-bordered relative  rounded-full" />
+          <div class="absolute mt-3 ml-40 hover:cursor-pointer">
+            <i class="fa fa-search" aria-hidden="true"></i>
           </div>
-          <div class="flex justify-end items-center flex-1 gap-3 md:gap-8  ">
-            <div class="">
-              <h2 class="text-4xl font-bold">29</h2>
-              <p class="text-center">Days</p>
-            </div>
-            <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
-            <div>
-              <h2 class="text-4xl font-bold">15</h2>
-              <p class="text-center">Hours</p>
-            </div>
-            <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
-            <div>
-              <h2 class="text-4xl font-bold">25</h2>
-              <p class="text-center">Minutes</p>
-            </div>
-            <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
-            <div>
-              <h2 class="text-4xl font-bold">08</h2>
-              <p class="text-center">Seconds</p>
-            </div>
+        </div>
+
+        <!-- nav responsive -->
+        <div class="navbar-end z-50">
+          <div class="dropdown flex justify-end">
+            <label tabindex="0" class="btn btn-ghost lg:hidden ">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+              </svg>
+            </label>
+            <ul tabindex="0"
+              class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box text-xl ">
+              <li><a>Home</a></li>
+              <li> <a>Shop</a></li>
+              <li><a>News</a></li>
+              <li><a>Contact</a></li>
+            </ul>
           </div>
+
+        </div>
+      </div>
+    </nav>
+
+    <!-- carousel -->
+    <section class="mt-10     flex flex-col justify-center items-center  ">
+      <div class="flex flex-col  items-center  text-white z-20 relative">
+
+        <!-- b -->
+        <div class="  absolute flex flex-col mt-10 items-center  text-white z-20 lg:mt-20 ">
+          <h1 class="text-base md:text-4xl lg:text-6xl md:mb-7 font-extrabold text-center">Exotic tastes at your
+            <br>doorstep</h1>
+          <p class="text-xs md:text-base">We supply highly quality organic products</p>
+          <a class="bg-color-primary p-1.5 md:px-6 md:py-3 rounded-md mt-4">Shop Now</a>
         </div>
         <!--  -->
-        <div>
-          <div class="grid mt-10 md:grid-cols-2 lg:grid-cols-4 gap-10">
-            <!-- card -->
-            <div class="card  bg-base-100 shadow-sm border-2 border-[#00000026] rounded-lg">
-              <figure class="px-20 pt-10  rounded-full ">
-                <img src="./images/fruit6.png" alt="Shoes" class="rounded-xl " />
-              </figure>
-              <div class="card-body items-center text-center">
-               <div class="border-b-2 ">
-                <h4 class="text-xl font-bold mb-3">12.90$ - 18.85$</h4>
-              </div>
-                  <!-- stars -->
-                  <p class=" text-color-footer opacity-60">Apples</p>
-                  <div class="flex gap-1 text-color-primary">
-                    <i class="fa fa-star " aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star-half-o " aria-hidden="true"></i>
-                    <i class="fa fa-star-o text-color-rating" aria-hidden="true"></i>
-                    <i class="fa fa-star-o text-color-rating" aria-hidden="true"></i>
-                  </div>
-                  <!-- <p class="font-bold text-color-primary text-sm" id="pic1">Details</p> -->
 
-                  <!-- model -->
-                  <!-- You can open the modal using ID.showModal() method -->
-                  <p class="font-bold text-color-primary text-sm cursor-pointer" onclick="my_modal_1.showModal()">Details</p>
-<dialog id="my_modal_1" class="modal">
-  <form method="dialog" class="modal-box w-11/12 max-w-sm">
-    <!-- <h3 class="font-bold text-lg">Hello!</h3>
-    <p class="py-4">Click the button below to close</p> -->
-    <div class="card  bg-base-100 shadow-sm ">
-      <figure class="px-20 pt-10  rounded-full ">
-        <img src="./images/fruit6.png" alt="Shoes" class="rounded-xl " />
-      </figure>
-      <div class="card-body items-center text-center">
-       
-       
-          <!-- stars -->
-          <p class=" text-color-footer font-bold text-2xl">Apples</p>
-          <p class="text-center">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
-          <div class="flex gap-1 text-color-primary">
-            <i class="fa fa-star " aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <i class="fa fa-star-half-o " aria-hidden="true"></i>
-            <i class="fa fa-star-o text-color-rating" aria-hidden="true"></i>
-            <i class="fa fa-star-o text-color-rating" aria-hidden="true"></i>
+
+
+
+        <div class="carousel w-full bg-caro-bg relative">
+          <div id="slide1" class="carousel-item w-full relative  ">
+
+            <div class="flex-1 relative  sm:w-full">
+              <div class=" z-30 bg-[#121212] opacity-90   w-full flex-1 rounded-lg">
+
+                <img src="./images/banner1.png" class="mix-blend-overlay  " />
+              </div>
+
+              <div
+                class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 md:left-16 md:right-16 top-1/2">
+                <a href="#slide4" class="btn border-0 bg-color-overlay rounded-full text-xl text-white">❮</a>
+                <a href="#slide2" class="btn border-0 bg-color-overlay rounded-full text-xl text-white">❯</a>
+              </div>
+
+
+
+            </div>
           </div>
-          
-          
-        
-      </div>
-    </div>
-    <div class="modal-action justify-center gap-2">
-      <!-- if there is a button, it will close the modal -->
-      <div class="flex justify-between items-center gap-4">
-        <button class="border-color-primary border-2 bg-white  px-6 py-3 rounded-md mt-4   ">Close</button>
-        <p class=" bg-color-primary  px-6 py-3 rounded-md mt-4 cursor-pointer   border-0 text-white ">Buy Now</p>
-       
-      </div>
-    </div>
-  </form>
-</dialog>
+          <div id="slide2" class="carousel-item w-full relative ">
 
-                  <!-- end -->
-                  
-                
+            <div class="flex-1 relative  sm:w-full">
+              <div class=" z-30 bg-[#121212] opacity-90   w-full flex-1 rounded-lg">
+
+                <img src="./images/banner2.png" class="mix-blend-overlay  " />
               </div>
+
+              <div
+                class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 md:left-16 md:right-16 top-1/2">
+                <a href="#slide1" class="btn border-0 bg-color-overlay rounded-full text-xl text-white">❮</a>
+                <a href="#slide3" class="btn border-0 bg-color-overlay rounded-full text-xl text-white">❯</a>
+              </div>
+
             </div>
-            
-            <!-- c -->
-            <div class="card  bg-base-100 shadow-sm border-2 border-[#00000026] rounded-lg">
-              <figure class="px-20 pt-10  rounded-full ">
-                <img src="./images/fruit7.png" alt="Shoes" class="rounded-xl " />
-              </figure>
-              <div class="card-body items-center text-center">
-               <div class="border-b-2 ">
-                <h4 class="text-xl font-bold mb-3">12.90$ - 18.85$</h4>
+          </div>
+          <div id="slide3" class="carousel-item w-full relative  ">
+
+
+            <div class="flex-1 relative  sm:w-full">
+              <div class=" z-30 bg-[#121212] opacity-90   w-full flex-1 rounded-lg">
+
+                <img src="./images/banner3.png" class="mix-blend-overlay  " />
               </div>
-                  <!-- stars -->
-                  <p class=" text-color-footer opacity-60">Oranges</p>
-                  <div class="flex gap-1 text-color-primary">
-                    <i class="fa fa-star " aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star-half-o " aria-hidden="true"></i>
-                    <i class="fa fa-star-o text-color-rating" aria-hidden="true"></i>
-                    <i class="fa fa-star-o text-color-rating" aria-hidden="true"></i>
-                  </div>
-                  <p class="font-bold text-color-primary text-sm cursor-pointer" onclick="my_modal_4.showModal()">Details</p>
-                  <dialog id="my_modal_4" class="modal">
-                    <form method="dialog" class="modal-box w-11/12 max-w-sm">
-                      <!-- <h3 class="font-bold text-lg">Hello!</h3>
-                      <p class="py-4">Click the button below to close</p> -->
-                      <div class="card  bg-base-100 shadow-sm ">
-                        <figure class="px-20 pt-10  rounded-full ">
-                          <img src="./images/fruit7.png" alt="Shoes" class="rounded-xl " />
-                        </figure>
-                        <div class="card-body items-center text-center">
-                         
-                         
-                            <!-- stars -->
-                            <p class=" text-color-footer font-bold text-2xl">Oranges</p>
-                            <p class="text-center">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
-                            <div class="flex gap-1 text-color-primary">
-                              <i class="fa fa-star " aria-hidden="true"></i>
-                              <i class="fa fa-star" aria-hidden="true"></i>
-                              <i class="fa fa-star-half-o " aria-hidden="true"></i>
-                              <i class="fa fa-star-o text-color-rating" aria-hidden="true"></i>
-                              <i class="fa fa-star-o text-color-rating" aria-hidden="true"></i>
-                            </div>
-                            
-                            
-                          
-                        </div>
-                      </div>
-                      <div class="modal-action justify-center gap-2">
-                        <!-- if there is a button, it will close the modal -->
-                        <div class="flex justify-between items-center gap-4">
-                          <button class="border-color-primary border-2 bg-white  px-6 py-3 rounded-md mt-4   ">Close</button>
-                          <p class=" bg-color-primary  px-6 py-3 rounded-md mt-4 cursor-pointer   border-0 text-white ">Buy Now</p>
-                         
-                        </div>
-                      </div>
-                    </form>
-                  </dialog>
-                  
-                
-              </div>
-            </div>
-            <!-- c -->
-            <div class="card  bg-base-100 shadow-sm border-2 border-[#00000026] rounded-lg">
-              <figure class="px-20 pt-10  rounded-full ">
-                <img src="./images/fruit8.png" alt="Shoes" class="rounded-xl " />
-              </figure>
-              <div class="card-body items-center text-center">
-               <div class="border-b-2 ">
-                <h4 class="text-xl font-bold mb-3">12.90$ - 18.85$</h4>
-              </div>
-                  <!-- stars -->
-                  <p class=" text-color-footer opacity-60">Red Dragon</p>
-                  <div class="flex gap-1 text-color-primary">
-                    <i class="fa fa-star " aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star-half-o " aria-hidden="true"></i>
-                    <i class="fa fa-star-o text-color-rating" aria-hidden="true"></i>
-                    <i class="fa fa-star-o text-color-rating" aria-hidden="true"></i>
-                  </div>
-                  <p class="font-bold text-color-primary text-sm cursor-pointer" onclick="my_modal_2.showModal()">Details</p>
-                  <dialog id="my_modal_2" class="modal">
-                    <form method="dialog" class="modal-box w-11/12 max-w-sm">
-                      <!-- <h3 class="font-bold text-lg">Hello!</h3>
-                      <p class="py-4">Click the button below to close</p> -->
-                      <div class="card  bg-base-100 shadow-sm ">
-                        <figure class="px-20 pt-10  rounded-full ">
-                          <img src="./images/fruit8.png" alt="Shoes" class="rounded-xl " />
-                        </figure>
-                        <div class="card-body items-center text-center">
-                         
-                         
-                            <!-- stars -->
-                            <p class=" text-color-footer font-bold text-2xl">Red Dragon</p>
-                            <p class="text-center">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
-                            <div class="flex gap-1 text-color-primary">
-                              <i class="fa fa-star " aria-hidden="true"></i>
-                              <i class="fa fa-star" aria-hidden="true"></i>
-                              <i class="fa fa-star-half-o " aria-hidden="true"></i>
-                              <i class="fa fa-star-o text-color-rating" aria-hidden="true"></i>
-                              <i class="fa fa-star-o text-color-rating" aria-hidden="true"></i>
-                            </div>
-                            
-                            
-                          
-                        </div>
-                      </div>
-                      <div class="modal-action justify-center gap-2">
-                        <!-- if there is a button, it will close the modal -->
-                        <div class="flex justify-between items-center gap-4">
-                          <button class="border-color-primary border-2 bg-white  px-6 py-3 rounded-md mt-4   ">Close</button>
-                          <p class=" bg-color-primary  px-6 py-3 rounded-md mt-4 cursor-pointer   border-0 text-white ">Buy Now</p>
-                         
-                        </div>
-                      </div>
-                    </form>
-                  </dialog>
-                  
-                
-              </div>
-            </div>
-            <!-- c -->
-            <div class="card  bg-base-100 shadow-sm border-2 border-[#00000026] rounded-lg">
-              <figure class="px-20 pt-10  rounded-full ">
-                <img src="./images/fruit9.png" alt="Shoes" class="rounded-xl " />
-              </figure>
-              <div class="card-body items-center text-center">
-               <div class="border-b-2 ">
-                <h4 class="text-xl font-bold mb-3">12.90$ - 18.85$</h4>
-              </div>
-                  <!-- stars -->
-                  <p class=" text-color-footer opacity-60">Banana</p>
-                  <div class="flex gap-1 text-color-primary">
-                    <i class="fa fa-star " aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star-half-o " aria-hidden="true"></i>
-                    <i class="fa fa-star-o text-color-rating" aria-hidden="true"></i>
-                    <i class="fa fa-star-o text-color-rating" aria-hidden="true"></i>
-                  </div>
-                  <p class="font-bold text-color-primary text-sm cursor-pointer" onclick="my_modal_3.showModal()">Details</p>
-                  <dialog id="my_modal_3" class="modal">
-                    <form method="dialog" class="modal-box w-11/12 max-w-sm">
-                      <!-- <h3 class="font-bold text-lg">Hello!</h3>
-                      <p class="py-4">Click the button below to close</p> -->
-                      <div class="card  bg-base-100 shadow-sm ">
-                        <figure class="px-20 pt-10  rounded-full ">
-                          <img src="./images/fruit9.png" alt="Shoes" class="rounded-xl " />
-                        </figure>
-                        <div class="card-body items-center text-center">
-                         
-                         
-                            <!-- stars -->
-                            <p class=" text-color-footer font-bold text-2xl">Banana</p>
-                            <p class="text-center">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
-                            <div class="flex gap-1 text-color-primary">
-                              <i class="fa fa-star " aria-hidden="true"></i>
-                              <i class="fa fa-star" aria-hidden="true"></i>
-                              <i class="fa fa-star-half-o " aria-hidden="true"></i>
-                              <i class="fa fa-star-o text-color-rating" aria-hidden="true"></i>
-                              <i class="fa fa-star-o text-color-rating" aria-hidden="true"></i>
-                            </div>
-                            
-                            
-                          
-                        </div>
-                      </div>
-                      <div class="modal-action justify-center gap-2">
-                        <!-- if there is a button, it will close the modal -->
-                        <div class="flex justify-between items-center gap-4">
-                          <button class="border-color-primary border-2 bg-white  px-6 py-3 rounded-md mt-4   ">Close</button>
-                          <p class=" bg-color-primary  px-6 py-3 rounded-md mt-4 cursor-pointer   border-0 text-white ">Buy Now</p>
-                         
-                        </div>
-                      </div>
-                    </form>
-                  </dialog>
-                  
-                  
-                
+              <div
+                class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 md:left-16 md:right-16 top-1/2">
+                <a href="#slide2" class="btn border-0 bg-color-overlay rounded-full text-xl text-white">❮</a>
+                <a href="#slide4" class="btn border-0 bg-color-overlay rounded-full text-xl text-white">❯</a>
               </div>
             </div>
           </div>
-         
+          <div id="slide4" class="carousel-item w-full  relative ">
+
+
+            <div class="flex-1 relative  sm:w-full">
+              <div class=" z-30 bg-[#121212] opacity-90   w-full flex-1 rounded-lg">
+
+                <img src="./images/banner4.png" class="mix-blend-overlay  " />
+              </div>
+              <div
+                class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 md:left-16 md:right-16 top-1/2">
+                <a href="#slide3" class="btn border-0 bg-color-overlay rounded-full text-xl text-white">❮</a>
+                <a href="#slide1" class="btn border-0 bg-color-overlay rounded-full text-xl text-white">❯</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--  -->
+        <div class=" hidden    lg:flex bg-white -mt-14 z-40 px-20 p-5 rounded-xl gap-6">
+          <img src="./images/fruit1.png" alt="">
+          <img src="./images/fruit2.png" alt="">
+          <img src="./images/fruit3.png" alt="">
+          <img src="./images/fruit4.png" alt="">
+          <img src="./images/fruit5.png" alt="">
+        </div>
+
+      </div>
+
+
+
+      <!--  -->
+
+
+
+    </section>
+  </header>
+
+  <!-- deal of the day section -->
+  <section class="max-w-screen-xl mx-auto p-4 mt-20">
+    <div class="flex flex-col ">
+      <div class="flex flex-col text-center lg:flex-row justify-between items-center lg:text-left gap-10 ">
+        <div class=" flex-1 space-y-3">
+          <h1 class="text-4xl font-extrabold">Deal of the day</h1>
+          <p class="text-sm ">Contrary to popular belief, is not simply random text. It has roots in a piece of
+            classical Latin literature from 45 BC, making it over 2000 years old.</p>
+        </div>
+        <div class="flex justify-end items-center flex-1 gap-3 md:gap-8  ">
+          <div class="">
+            <h2 class="text-4xl font-bold">29</h2>
+            <p class="text-center">Days</p>
+          </div>
+          <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+          <div>
+            <h2 class="text-4xl font-bold">15</h2>
+            <p class="text-center">Hours</p>
+          </div>
+          <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+          <div>
+            <h2 class="text-4xl font-bold">25</h2>
+            <p class="text-center">Minutes</p>
+          </div>
+          <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+          <div>
+            <h2 class="text-4xl font-bold">08</h2>
+            <p class="text-center">Seconds</p>
+          </div>
         </div>
       </div>
-      <a class="bg-color-primary p-1.5 md:px-6 md:py-3 rounded-md mt-4 flex justify-center items-center text-white max-w-fit mx-auto">Shop Now</a>
-    </section>
-   
+      <!--  -->
+      <div>
+        <div class="grid mt-10 md:grid-cols-2 lg:grid-cols-4 gap-10">
+          <!-- card -->
+          <div class="card  bg-base-100 shadow-sm border-2 border-[#00000026] rounded-lg">
+            <figure class="px-20 pt-10  rounded-full ">
+              <img src="./images/fruit6.png" alt="Shoes" class="rounded-xl " />
+            </figure>
+            <div class="card-body items-center text-center">
+              <div class="border-b-2 ">
+                <h4 class="text-xl font-bold mb-3">12.90$ - 18.85$</h4>
+              </div>
+              <!-- stars -->
+              <p class=" text-color-footer opacity-60">Apples</p>
+              <div class="flex gap-1 text-color-primary">
+                <i class="fa fa-star " aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star-half-o " aria-hidden="true"></i>
+                <i class="fa fa-star-o text-color-rating" aria-hidden="true"></i>
+                <i class="fa fa-star-o text-color-rating" aria-hidden="true"></i>
+              </div>
+
+
+              <!-- model -->
+              <!-- You can open the modal using ID.showModal() method -->
+              <p class="font-bold text-color-primary text-sm cursor-pointer" onclick="my_modal_1.showModal()">Details
+              </p>
+              <dialog id="my_modal_1" class="modal">
+                <form method="dialog" class="modal-box w-11/12 max-w-sm">
+
+                  <div class="card  bg-base-100 shadow-sm ">
+                    <figure class="px-20 pt-10  rounded-full ">
+                      <img src="./images/fruit6.png" alt="Shoes" class="rounded-xl " />
+                    </figure>
+                    <div class="card-body items-center text-center">
+
+
+                      <!-- stars -->
+                      <p class=" text-color-footer font-bold text-2xl">Apples</p>
+                      <p class="text-center">Professional employees are there for you to pick the most amazing and fresh
+                        fruits.</p>
+                      <div class="flex gap-1 text-color-primary">
+                        <i class="fa fa-star " aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star-half-o " aria-hidden="true"></i>
+                        <i class="fa fa-star-o text-color-rating" aria-hidden="true"></i>
+                        <i class="fa fa-star-o text-color-rating" aria-hidden="true"></i>
+                      </div>
+
+
+
+                    </div>
+                  </div>
+                  <div class="modal-action justify-center gap-2">
+                    <!-- if there is a button, it will close the modal -->
+                    <div class="flex justify-between items-center gap-4">
+                      <button
+                        class="border-color-primary border-2 bg-white  px-6 py-3 rounded-md mt-4   ">Close</button>
+                      <p class=" bg-color-primary  px-6 py-3 rounded-md mt-4 cursor-pointer   border-0 text-white ">Buy
+                        Now</p>
+
+                    </div>
+                  </div>
+                </form>
+              </dialog>
+
+              <!-- end -->
+
+
+            </div>
+          </div>
+
+          <!-- c -->
+          <div class="card  bg-base-100 shadow-sm border-2 border-[#00000026] rounded-lg">
+            <figure class="px-20 pt-10  rounded-full ">
+              <img src="./images/fruit7.png" alt="Shoes" class="rounded-xl " />
+            </figure>
+            <div class="card-body items-center text-center">
+              <div class="border-b-2 ">
+                <h4 class="text-xl font-bold mb-3">12.90$ - 18.85$</h4>
+              </div>
+              <!-- stars -->
+              <p class=" text-color-footer opacity-60">Oranges</p>
+              <div class="flex gap-1 text-color-primary">
+                <i class="fa fa-star " aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star-half-o " aria-hidden="true"></i>
+                <i class="fa fa-star-o text-color-rating" aria-hidden="true"></i>
+                <i class="fa fa-star-o text-color-rating" aria-hidden="true"></i>
+              </div>
+              <p class="font-bold text-color-primary text-sm cursor-pointer" onclick="my_modal_4.showModal()">Details
+              </p>
+              <dialog id="my_modal_4" class="modal">
+                <form method="dialog" class="modal-box w-11/12 max-w-sm">
+                  <!-- <h3 class="font-bold text-lg">Hello!</h3>
+                      <p class="py-4">Click the button below to close</p> -->
+                  <div class="card  bg-base-100 shadow-sm ">
+                    <figure class="px-20 pt-10  rounded-full ">
+                      <img src="./images/fruit7.png" alt="Shoes" class="rounded-xl " />
+                    </figure>
+                    <div class="card-body items-center text-center">
+
+
+                      <!-- stars -->
+                      <p class=" text-color-footer font-bold text-2xl">Oranges</p>
+                      <p class="text-center">Professional employees are there for you to pick the most amazing and fresh
+                        fruits.</p>
+                      <div class="flex gap-1 text-color-primary">
+                        <i class="fa fa-star " aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star-half-o " aria-hidden="true"></i>
+                        <i class="fa fa-star-o text-color-rating" aria-hidden="true"></i>
+                        <i class="fa fa-star-o text-color-rating" aria-hidden="true"></i>
+                      </div>
+
+
+
+                    </div>
+                  </div>
+                  <div class="modal-action justify-center gap-2">
+                    <!-- if there is a button, it will close the modal -->
+                    <div class="flex justify-between items-center gap-4">
+                      <button
+                        class="border-color-primary border-2 bg-white  px-6 py-3 rounded-md mt-4   ">Close</button>
+                      <p class=" bg-color-primary  px-6 py-3 rounded-md mt-4 cursor-pointer   border-0 text-white ">Buy
+                        Now</p>
+
+                    </div>
+                  </div>
+                </form>
+              </dialog>
+
+
+            </div>
+          </div>
+          <!-- c -->
+          <div class="card  bg-base-100 shadow-sm border-2 border-[#00000026] rounded-lg">
+            <figure class="px-20 pt-10  rounded-full ">
+              <img src="./images/fruit8.png" alt="Shoes" class="rounded-xl " />
+            </figure>
+            <div class="card-body items-center text-center">
+              <div class="border-b-2 ">
+                <h4 class="text-xl font-bold mb-3">12.90$ - 18.85$</h4>
+              </div>
+              <!-- stars -->
+              <p class=" text-color-footer opacity-60">Red Dragon</p>
+              <div class="flex gap-1 text-color-primary">
+                <i class="fa fa-star " aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star-half-o " aria-hidden="true"></i>
+                <i class="fa fa-star-o text-color-rating" aria-hidden="true"></i>
+                <i class="fa fa-star-o text-color-rating" aria-hidden="true"></i>
+              </div>
+              <p class="font-bold text-color-primary text-sm cursor-pointer" onclick="my_modal_2.showModal()">Details
+              </p>
+              <dialog id="my_modal_2" class="modal">
+                <form method="dialog" class="modal-box w-11/12 max-w-sm">
+                  <!-- <h3 class="font-bold text-lg">Hello!</h3>
+                      <p class="py-4">Click the button below to close</p> -->
+                  <div class="card  bg-base-100 shadow-sm ">
+                    <figure class="px-20 pt-10  rounded-full ">
+                      <img src="./images/fruit8.png" alt="Shoes" class="rounded-xl " />
+                    </figure>
+                    <div class="card-body items-center text-center">
+
+
+                      <!-- stars -->
+                      <p class=" text-color-footer font-bold text-2xl">Red Dragon</p>
+                      <p class="text-center">Professional employees are there for you to pick the most amazing and fresh
+                        fruits.</p>
+                      <div class="flex gap-1 text-color-primary">
+                        <i class="fa fa-star " aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star-half-o " aria-hidden="true"></i>
+                        <i class="fa fa-star-o text-color-rating" aria-hidden="true"></i>
+                        <i class="fa fa-star-o text-color-rating" aria-hidden="true"></i>
+                      </div>
+
+
+
+                    </div>
+                  </div>
+                  <div class="modal-action justify-center gap-2">
+                    <!-- if there is a button, it will close the modal -->
+                    <div class="flex justify-between items-center gap-4">
+                      <button
+                        class="border-color-primary border-2 bg-white  px-6 py-3 rounded-md mt-4   ">Close</button>
+                      <p class=" bg-color-primary  px-6 py-3 rounded-md mt-4 cursor-pointer   border-0 text-white ">Buy
+                        Now</p>
+
+                    </div>
+                  </div>
+                </form>
+              </dialog>
+
+
+            </div>
+          </div>
+          <!-- c -->
+          <div class="card  bg-base-100 shadow-sm border-2 border-[#00000026] rounded-lg">
+            <figure class="px-20 pt-10  rounded-full ">
+              <img src="./images/fruit9.png" alt="Shoes" class="rounded-xl " />
+            </figure>
+            <div class="card-body items-center text-center">
+              <div class="border-b-2 ">
+                <h4 class="text-xl font-bold mb-3">12.90$ - 18.85$</h4>
+              </div>
+              <!-- stars -->
+              <p class=" text-color-footer opacity-60">Banana</p>
+              <div class="flex gap-1 text-color-primary">
+                <i class="fa fa-star " aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star-half-o " aria-hidden="true"></i>
+                <i class="fa fa-star-o text-color-rating" aria-hidden="true"></i>
+                <i class="fa fa-star-o text-color-rating" aria-hidden="true"></i>
+              </div>
+              <p class="font-bold text-color-primary text-sm cursor-pointer" onclick="my_modal_3.showModal()">Details
+              </p>
+              <dialog id="my_modal_3" class="modal">
+                <form method="dialog" class="modal-box w-11/12 max-w-sm">
+                  <!-- <h3 class="font-bold text-lg">Hello!</h3>
+                      <p class="py-4">Click the button below to close</p> -->
+                  <div class="card  bg-base-100 shadow-sm ">
+                    <figure class="px-20 pt-10  rounded-full ">
+                      <img src="./images/fruit9.png" alt="Shoes" class="rounded-xl " />
+                    </figure>
+                    <div class="card-body items-center text-center">
+
+
+                      <!-- stars -->
+                      <p class=" text-color-footer font-bold text-2xl">Banana</p>
+                      <p class="text-center">Professional employees are there for you to pick the most amazing and fresh
+                        fruits.</p>
+                      <div class="flex gap-1 text-color-primary">
+                        <i class="fa fa-star " aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star-half-o " aria-hidden="true"></i>
+                        <i class="fa fa-star-o text-color-rating" aria-hidden="true"></i>
+                        <i class="fa fa-star-o text-color-rating" aria-hidden="true"></i>
+                      </div>
+
+
+
+                    </div>
+                  </div>
+                  <div class="modal-action justify-center gap-2">
+                    <!-- if there is a button, it will close the modal -->
+                    <div class="flex justify-between items-center gap-4">
+                      <button
+                        class="border-color-primary border-2 bg-white  px-6 py-3 rounded-md mt-4   ">Close</button>
+                      <p class=" bg-color-primary  px-6 py-3 rounded-md mt-4 cursor-pointer   border-0 text-white ">Buy
+                        Now</p>
+
+                    </div>
+                  </div>
+                </form>
+              </dialog>
+
+
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <a
+      class="bg-color-primary p-1.5 md:px-6 md:py-3 rounded-md mt-4 flex justify-center items-center text-white max-w-fit mx-auto">Shop
+      Now</a>
+  </section>
+
+  <!-- meet the team section -->
+  <section class="max-w-screen-xl mx-auto p-4 mt-20">
+    <div class="hero min-h-fit rounded-2xl" style="background-image: url('images/team.png');">
+      <div class="hero-overlay bg-opacity-70 rounded-2xl"></div>
+      <div class="hero-content text-center text-neutral-content">
+        <div class="max-w-4xl">
+          <h1 class="mb-5 text-5xl font-bold pt-10">Meet the team section</h1>
+          <p class="mb-5 lg:w-3/4 mx-auto text-sm">Contrary to popular belief, is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 pb-14 md:gap-2">
+            <div class="flex flex-col items-center justify-center ">
+              <img src="images/member1.png" alt="">
+              <h2 class="font-bold text-xl text-center">Awlad Hossain</h2>
+              <p class="text-sm text-center mt-1">Fruits Expert</p>
+              <div class="flex gap-3 mt-2">
+                <i class="fa fa-facebook bg-color-primary py-2 px-2.5 rounded-full " aria-hidden="true"></i>
+              <i class="fa fa-twitter bg-color-primary rounded-full py-2 px-2" aria-hidden="true"></i>
+              <i class="fa fa-linkedin bg-color-primary rounded-full py-1.5 px-2" aria-hidden="true"></i>
+              </div>
+              
+            </div>
+            <div class="flex flex-col items-center justify-center">
+              <img src="images/member2.png" alt="">
+              <h2 class="font-bold text-xl text-center">Safia Chowdhury</h2>
+              <p class="text-sm text-center mt-1">Fruits Expert</p>
+              <div class="flex gap-3 mt-2">
+                <i class="fa fa-facebook bg-color-primary py-2 px-2.5 rounded-full " aria-hidden="true"></i>
+              <i class="fa fa-twitter bg-color-primary rounded-full py-2 px-2" aria-hidden="true"></i>
+              <i class="fa fa-linkedin bg-color-primary rounded-full py-1.5 px-2" aria-hidden="true"></i>
+              </div>
+              
+            </div>
+            <div class="flex flex-col items-center justify-center">
+              <img src="images/member3.png" alt="">
+              <h2 class="font-bold text-xl text-center">Rokib Hossain</h2>
+              <p class="text-sm text-center mt-1">Fruits Expert</p>
+              <div class="flex gap-3 mt-2">
+                <i class="fa fa-facebook bg-color-primary py-2 px-2.5 rounded-full " aria-hidden="true"></i>
+              <i class="fa fa-twitter bg-color-primary rounded-full py-2 px-2" aria-hidden="true"></i>
+              <i class="fa fa-linkedin bg-color-primary rounded-full py-1.5 px-2" aria-hidden="true"></i>
+              </div>
+              
+            </div>
+            <div class="flex flex-col items-center justify-center">
+              <img src="images/member4.png" alt="">
+              <h2 class="font-bold text-xl text-center">Chaity</h2>
+              <p class="text-sm text-center mt-1">Fruits Expert</p>
+              <div class="flex gap-3 mt-2">
+                <i class="fa fa-facebook bg-color-primary py-2 px-2.5 rounded-full " aria-hidden="true"></i>
+              <i class="fa fa-twitter bg-color-primary rounded-full py-2 px-2" aria-hidden="true"></i>
+              <i class="fa fa-linkedin bg-color-primary rounded-full py-1.5 px-2" aria-hidden="true"></i>
+              </div>
+              
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Why Choose Us -->
+  <section class="max-w-screen-xl mx-auto p-4 mt-20">
+
+  </section>
+
 </body>
+
 </html>
