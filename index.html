@@ -89,11 +89,11 @@
     </nav>
 
     <!-- carousel -->
-    <section class="mt-10     flex flex-col justify-center items-center  ">
+    <section class="max-h-[calc(100vh-100px)] mt-10     flex flex-col justify-center items-center  ">
       <div class="flex flex-col  items-center  text-white z-20 relative">
 
         <!-- b -->
-        <div class="  absolute flex flex-col mt-10 items-center  text-white z-20 lg:mt-20 ">
+        <div class="  absolute flex flex-col mt-5 items-center  text-white z-20 md:mt-16 lg:mt-20 ">
           <h1 class="text-base md:text-4xl lg:text-6xl md:mb-7 font-extrabold text-center">Exotic tastes at your
             <br>doorstep</h1>
           <p class="text-xs md:text-base">We supply highly quality organic products</p>
@@ -172,7 +172,7 @@
         </div>
 
         <!--  -->
-        <div class=" hidden    lg:flex bg-white -mt-16 z-40 px-20 p-5 rounded-xl gap-6">
+        <div class=" hidden    lg:flex bg-white -mt-20 z-40 px-20 py-2 rounded-xl gap-6 ">
           <img src="./images/fruit1.png" alt="">
           <img src="./images/fruit2.png" alt="">
           <img src="./images/fruit3.png" alt="">
@@ -197,7 +197,7 @@
       <div class="flex flex-col text-center lg:flex-row justify-between items-center lg:text-left gap-10 ">
         <div class=" flex-1 space-y-3">
           <h1 class="text-4xl font-extrabold">Deal of the day</h1>
-          <p class="text-sm ">Contrary to popular belief, is not simply random text. It has roots in a piece of
+          <p class="text-sm md:w-10/12 md:mx-auto lg:mx-0">Contrary to popular belief, is not simply random text. It has roots in a piece of
             classical Latin literature from 45 BC, making it over 2000 years old.</p>
         </div>
         <div class="flex justify-end items-center flex-1 gap-3 md:gap-8  ">
@@ -489,7 +489,7 @@
       </div>
     </div>
     <a
-      class="bg-color-primary p-1.5 md:px-6 md:py-3 rounded-md mt-4 flex justify-center items-center text-white max-w-fit mx-auto">Shop
+      class="bg-color-primary p-1.5 md:px-6 md:py-3 rounded-md mt-14 flex justify-center items-center text-white max-w-fit mx-auto">Shop
       Now</a>
   </section>
 
@@ -559,80 +559,82 @@
         <h1 class=" text-4xl font-bold ">Why Choose Us</h1>
           <p class=" text-sm md:w-3/4 lg:w-2/4 text-center mt-5 text-footer py-3">Contrary to popular belief, is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
 
-<!-- h -->
-          <div class="hidden lg:grid grid-cols-3 pt-10">
-
-            <div>
-              <div class="flex items-start justify-start gap-5">
-                <i class="fa fa-users bg-color-back-icon p-2 rounded-full" aria-hidden="true"></i>
+<!-- grid -->
+          <div class="grid grid-cols-1 lg:grid-cols-3 pt-10">
+           <!-- 1st column -->
+            <div class="order-2 md:order-1 ">
+              <div class="flex flex-col  items-center justify-center text-center md:text-start md:flex-row mt-7 md:mt-0 md:items-start md:justify-start gap-5  ">
+                <i class="fa fa-users bg-color-back-icon rounded-full text-2xl  p-4 " aria-hidden="true"></i>
                 <div class="">
                   <h1 class="text-xl font-bold ">Dedicated Team</h1>
-                  <img src="./images/Line 1.png" alt="" class="w-1/4 h-1 my-3">
-                  <p class="text-sm color-back-icon">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+                  <img src="./images/Line 1.png" alt="" class="w-1/4 h-1 my-3 mx-auto md:mx-0">
+                  <p class="text-sm color-back-icon mb-7 lg:mb-0">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
                 </div>
               </div>
               <!--  -->
-              <div class="flex items-start justify-start gap-5 py-4">
-                <i class="fa fa-heart-o bg-color-back-icon p-2 rounded-full" aria-hidden="true"></i>
+              <div class="flex flex-col  items-center justify-center text-center md:text-start md:flex-row  md:items-start md:justify-start gap-5  ">
+                <i class="fa fa-heart-o bg-color-back-icon  rounded-full lg:mt-3 text-2xl  py-4 px-5" aria-hidden="true"></i>
                 <div>
-                  <h1 class="text-xl font-bold ">Fresh is Best</h1>
-                  <img src="./images/Line 1.png" alt="" class="w-1/4 h-1 my-3">
-                  <p class="text-sm color-back-icon">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+                  <h1 class="text-xl font-bold lg:mt-3">Fresh is Best</h1>
+                  <img src="./images/Line 1.png" alt="" class="w-1/4 h-1 my-3 mx-auto md:mx-0">
+                  <p class="text-sm color-back-icon mb-7 lg:mb-0">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
                 </div>
               </div>
               <!--  -->
-              <div class="flex items-start justify-start gap-5 py-4">
-                <i class="fa fa-gift bg-color-back-icon p-2 rounded-full" aria-hidden="true"></i>
+              <div class="flex flex-col  items-center justify-center text-center md:text-start md:flex-row  md:items-start md:justify-start gap-5  ">
+                <i class="fa fa-gift bg-color-back-icon  rounded-full lg:mt-3 text-2xl  py-4 px-5" aria-hidden="true"></i>
                 <div>
-                  <h1 class="text-xl font-bold ">Gift Certificates</h1>
-                  <img src="./images/Line 1.png" alt="" class="w-1/4 h-1 my-3">
-                  <p class="text-sm color-back-icon">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+                  <h1 class="text-xl font-bold lg:mt-3">Gift Certificates</h1>
+                  <img src="./images/Line 1.png" alt="" class="w-1/4 h-1 my-3 mx-auto md:mx-0">
+                  <p class="text-sm color-back-icon mb-7 lg:mb-0">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
                 </div>
               </div>
                 </div>
-                <div>
+                <!-- second -->
+                <div class="order-1 md:order-2 flex flex-col items-center justify-center lg:flex-row">
                   <img src="./images/whychoose1.png" alt="">
                 </div>
-                <div>
-                  <div class="flex items-start justify-end flex-row-reverse gap-5">
-                    <i class="fa fa-shopping-bag bg-color-back-icon p-2 rounded-full" aria-hidden="true"></i>
+                <!-- 3rd column -->
+                <div class="order-3 md:order-3 lg:mt-3">
+                  <div class="flex flex-col  items-center justify-center text-center md:items-start md:justify-end md:flex-row-reverse gap-5">
+                    <i class="fa fa-shopping-bag bg-color-back-icon p-6 rounded-full mt-7 lg:mt-0 text-2xl  py-4 px-5" aria-hidden="true"></i>
                 
-                    <div class="text-right flex flex-col justify-center items-end ">
+                    <div class=" text-center md:text-right flex flex-col justify-center md:items-end ">
                      
-                        <h1 class="text-xl font-bold ">Integrated Supplier</h1>
+                        <h1 class="text-xl font-bold md:mt-7 lg:mt-0">Integrated Supplier</h1>
                      
-                        <img src="./images/Line 1.png" alt="" class="w-1/4 h-1 my-3">
+                        <img src="./images/Line 1.png" alt="" class="w-1/4 h-1 my-3 mx-auto md:mx-0">
                    
                      
-                      <p class="text-sm color-back-icon mt-3">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+                      <p class="text-sm color-back-icon  mb-7 lg:mb-0">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
                     </div>
                   </div>
                   <!--  -->
-                  <div class="flex items-start justify-end flex-row-reverse gap-5 py-4">
-                    <i class="fa fa-connectdevelop bg-color-back-icon p-2 rounded-full" aria-hidden="true"></i>
+                  <div class="flex flex-col  items-center justify-center text-center md:items-start md:justify-end md:flex-row-reverse gap-5">
+                    <i class="fa fa-connectdevelop bg-color-back-icon p-6 rounded-full lg:mt-3 text-2xl  py-4 px-5" aria-hidden="true"></i>
                 
-                    <div class="text-right flex flex-col justify-center items-end ">
+                    <div class="text-center md:text-right flex flex-col justify-center md:items-end">
                      
-                        <h1 class="text-xl font-bold ">Sustainable Practice</h1>
+                        <h1 class="text-xl font-bold lg:mt-3">Sustainable Practice</h1>
                      
-                        <img src="./images/Line 1.png" alt="" class="w-1/4 h-1 my-3">
+                        <img src="./images/Line 1.png" alt="" class="w-1/4 h-1 my-3 mx-auto md:mx-0">
                    
                      
-                      <p class="text-sm color-back-icon mt-3">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+                      <p class="text-sm color-back-icon  mb-7 lg:mb-0">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
                     </div>
                   </div>
                   <!--  -->
-                  <div class="flex items-start justify-end flex-row-reverse gap-5 py-4">
-                    <i class="fa fa-thumbs-o-up bg-color-back-icon p-2 rounded-full" aria-hidden="true"></i>
+                  <div class="flex flex-col  items-center justify-center text-center md:items-start md:justify-end md:flex-row-reverse gap-5">
+                    <i class="fa fa-thumbs-o-up bg-color-back-icon p-6 rounded-full lg:mt-3 text-3xl  py-4 px-5" aria-hidden="true"></i>
+                              
+                    <div class="text-center md:text-right flex flex-col justify-center md:items-end">
+                     
+                        <h1 class="text-xl font-bold lg:mt-3">The Benefits Only</h1>
+                     
+                        <img src="./images/Line 1.png" alt="" class="w-1/4 h-1 my-3 mx-auto md:mx-0">
                    
-                    <div class="text-right flex flex-col justify-center items-end ">
                      
-                        <h1 class="text-xl font-bold ">The Benefits Only</h1>
-                     
-                        <img src="./images/Line 1.png" alt="" class="w-1/4 h-1 my-3">
-                   
-                     
-                      <p class="text-sm color-back-icon mt-3">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+                      <p class="text-sm color-back-icon ">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
                     </div>
                   </div>
                     </div>
@@ -644,7 +646,7 @@
 
 <!-- for mobile version -->
 
-<div class="flex flex-col items-center justify-center lg:hidden">
+<!-- <div class="flex flex-col items-center justify-center lg:hidden">
   <div>
     <img src="./images/whychoose1.png" alt="">
   </div>
@@ -667,7 +669,7 @@
                   <p class="text-sm color-back-icon">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
                 </div>
               </div>
-              <!--  -->
+            
               <div class=" text-center mt-6">
                 <i class="fa fa-gift bg-color-back-icon p-2 rounded-full" aria-hidden="true"></i>
                 <div>
@@ -693,7 +695,7 @@
                     <p class="text-sm color-back-icon mt-3">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
                   </div>
                 </div>
-                <!--  -->
+             
                 <div class="text-center mt-6">
                   <i class="fa fa-connectdevelop bg-color-back-icon p-2 rounded-full" aria-hidden="true"></i>
               
@@ -707,7 +709,7 @@
                     <p class="text-sm color-back-icon mt-3">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
                   </div>
                 </div>
-                <!--  -->
+              
                 <div class="text-center mt-6">
                   <i class="fa fa-thumbs-o-up bg-color-back-icon p-2 rounded-full" aria-hidden="true"></i>
                  
@@ -724,10 +726,10 @@
                   </div>
 
 
-</div>
+</div> 
 
 <!-- end mobile -->
-
+          
       </div>
     </div>
   </section>
